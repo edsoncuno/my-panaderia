@@ -10,5 +10,7 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  // se agrega esto para utilizat github pages action
+  base: "/my-panaderia"
 })

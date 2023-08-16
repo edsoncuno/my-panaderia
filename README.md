@@ -1,25 +1,18 @@
-# panaderia-vuejs
+# My-Panaderia
 
-Pagina web como ejemplo para una paderia.
+Pagina web basica para una panaderia
 
 [![portmain.png](https://i.postimg.cc/3xWJgW9s/portmain.png)](https://postimg.cc/hXWBnDks)
 
-## Requisitos
+## Levantar el servidor de desarrollo
 
-Instalar Node,js
+Instalar:
+- Node.js https://nodejs.org/en/download/
 
-https://nodejs.org/en/download/
-
-## Uso
-
-Instalar las dependencias
+Dentro de la carpeta del proyecto ejecutar:
 
 ```sh
 npm install
-```
-
-Levantar el servidor de desarrollo
-
-```sh
 npm run dev
 ```
+
