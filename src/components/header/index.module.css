@@ -1,0 +1,12 @@
+.app {
+  width: 100%;
+  height: var(--header-height);
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(5fr);
+}
+
+.app a .logo {
+  width: 3rem;
+  height: 3rem;
+}
