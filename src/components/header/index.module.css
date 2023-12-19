@@ -1,12 +1,33 @@
-.app {
+header {
   width: 100%;
   height: var(--header-height);
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(5fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid grey;
 }
 
-.app a .logo {
-  width: 3rem;
-  height: 3rem;
+header a .logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+  margin-right: 1.5rem;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+header nav a:hover {
+  color: goldenrod;
 }

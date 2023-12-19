@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
   list-style: none;
 }
 .app li a {
@@ -10,6 +9,7 @@
   min-height: 1rem;
   transition: opacity 0.3s ease;
   display: block;
+  margin-right: 1rem;
 }
 
 .app li a:hover {
