@@ -6,7 +6,8 @@
 			"settings": {},
 			"extensions": [
 				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},

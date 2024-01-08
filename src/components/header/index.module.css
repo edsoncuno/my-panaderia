@@ -31,3 +31,27 @@ header nav a:last-child {
 header nav a:hover {
   color: goldenrod;
 }
+
+@media (min-width: 600px) {
+  header {
+    background: green;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    background: blue;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    background: red;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    background: orange;
+  }
+}
