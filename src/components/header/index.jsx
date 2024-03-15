@@ -1,8 +1,6 @@
 import style from "./index.module.css";
 import logo from "/logos/logo.png";
 
-import SocialNetworks from "./../social-networks";
-
 export default function App() {
   const logos = [
     { url: "/logos/facebook-logo.svg", href: "https://www.facebook.com" },
@@ -19,9 +17,18 @@ export default function App() {
   ];
 
   const list = enlaces.map((item, index) => (
-    <a key={"id-" + index} href={item.href}>
-      {item.label}
-    </a>
+    <li key={"id-nav-ul-li" + index}>
+      <a href={item.href}>{item.label}</a>
+    </li>
+  ));
+
+  const listLogos = logos.map((item, index) => (
+    <Logo
+      key={"id-nav-ul-li-ul-li-" + index}
+      url={item.url}
+      href={item.href}
+      size={"3rem"}
+    />
   ));
 
   return (
@@ -29,10 +36,34 @@ export default function App() {
       <a href="#section-inicio">
         <img src={logo} alt="logo" className={style.logo} />
       </a>
-      <nav>{list}</nav>
-      <div>
-        <SocialNetworks logos={logos} size={"3rem"} />
-      </div>
+      <nav>
+        <ul>{list}
+        <ul className={style.socialNetworks}>{listLogos}</ul>
+        </ul>
+      </nav>
+      <div className={style.bars} />
+      <ul className={style.socialNetworks}>{listLogos}</ul>
     </header>
+  );
+}
+
+function Logo(props) {
+  return (
+    <li>
+      <a
+        href={props.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={style.logo}
+        style={{
+          backgroundImage: `url(${props.url})`,
+          backgroundPosition: "center",
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
+          minWidth: `${props.size}`,
+          minHeight: `${props.size}`,
+        }}
+      />
+    </li>
   );
 }

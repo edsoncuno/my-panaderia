@@ -2,13 +2,16 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   height: var(--header-height);
+
+  border-bottom: 2px solid grey;
+  background-color: white;
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 2px solid grey;
-  background-color: transparent;
 }
 
 header a .logo {
@@ -17,29 +20,78 @@ header a .logo {
 }
 
 header nav {
-  display: flex;
-  flex-direction: row;
+  position: absolute;
+  top: var(--header-height);
+  left: -100%;
+  width: 100%;
+  height: 12rem;
+  background-color: white;
+
+  transition: left 0.3s;
 }
 
-header nav a {
+header .navOpen {
+  left: 0;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  border-bottom: 2px solid grey;
+}
+
+header nav ul li a {
+  font-size: 1.5rem;
   text-decoration: none;
+  font-weight: bold;
+  display: block;
+  text-align: center;
   color: black;
-  transition: color 0.3s ease;
-  margin-right: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-header nav a:last-child {
-  margin-right: 0;
+header nav ul li a:hover {
+  color: gray;
 }
 
-header nav a:hover {
-  color: goldenrod;
+header .bars {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("./../../../public/bars-black.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* SOCIAL NETWORKING*/
+.socialNetworks {
+  display: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.socialNetworks li a {
+  min-width: 1rem;
+  min-height: 1rem;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin-right: 1rem;
+}
+
+.socialNetworks li a:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 320px) {
   /* mobile */
   header {
     background-color: red;
+  }
+  header nav {
+    left: 0;
   }
 }
 
@@ -68,6 +120,12 @@ header nav a:hover {
   /* tablet */
   header {
     background: orange;
+  }
+  header .bars {
+    display: none;
+  }
+  header .socialNetworks {
+    display: flex;
   }
 }
 
