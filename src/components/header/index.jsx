@@ -1,7 +1,11 @@
+"use client";
 import style from "./index.module.css";
 import logo from "/logos/logo.png";
+import { useState } from "react";
 
 export default function App() {
+  const [isShowingSideBar, setIsShowingSideBar] = useState(false);
+
   const logos = [
     { url: "/logos/facebook-logo.svg", href: "https://www.facebook.com" },
     { url: "/logos/twitter-logo-black.svg", href: "https://www.twitter.com" },
@@ -31,17 +35,24 @@ export default function App() {
     />
   ));
 
+  function handleSideBar() {
+    setIsShowingSideBar(!isShowingSideBar);
+  }
+
   return (
     <header>
       <a href="#section-inicio">
         <img src={logo} alt="logo" className={style.logo} />
       </a>
-      <nav>
-        <ul>{list}
-        <ul className={style.socialNetworks}>{listLogos}</ul>
+      <nav className={`${isShowingSideBar ? style.navOpen : ""}`}>
+        <ul>
+          {list}
+          <li>
+            <ul className={style.socialNetworks}>{listLogos}</ul>
+          </li>
         </ul>
       </nav>
-      <div className={style.bars} />
+      <div className={style.bars} onClick={handleSideBar}/>
       <ul className={style.socialNetworks}>{listLogos}</ul>
     </header>
   );
