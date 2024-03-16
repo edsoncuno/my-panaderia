@@ -1,5 +1,5 @@
 "use client";
-import style from "./index.module.css";
+import styles from "./index.module.css";
 import logo from "/logos/logo.png";
 import { useState } from "react";
 
@@ -42,18 +42,18 @@ export default function App() {
   return (
     <header>
       <a href="#section-inicio">
-        <img src={logo} alt="logo" className={style.logo} />
+        <img src={logo} alt="logo" className={styles.logo} />
       </a>
-      <nav className={`${isShowingSideBar ? style.navOpen : ""}`}>
+      <nav className={`${isShowingSideBar ? styles.navOpen : ""}`}>
         <ul>
           {list}
           <li>
-            <ul className={style.socialNetworks}>{listLogos}</ul>
+            <ul className={styles.socialNetworks}>{listLogos}</ul>
           </li>
         </ul>
       </nav>
-      <div className={style.bars} onClick={handleSideBar}/>
-      <ul className={style.socialNetworks}>{listLogos}</ul>
+      <div className={styles.bars} onClick={handleSideBar} />
+      <ul className={styles.socialNetworks}>{listLogos}</ul>
     </header>
   );
 }
@@ -65,8 +65,8 @@ function Logo(props) {
         href={props.href}
         target="_blank"
         rel="noopener noreferrer"
-        className={style.logo}
-        style={{
+        className={styles.logo}
+        styles={{
           backgroundImage: `url(${props.url})`,
           backgroundPosition: "center",
           backgroundSize: "100% 100%",

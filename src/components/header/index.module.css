@@ -24,7 +24,7 @@ header a .logo {
 header .bars {
   width: 3rem;
   height: 3rem;
-  background-image: url("./../../../public/bars-black.svg");
+  background-image: url("/bars-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -54,6 +54,12 @@ header .bars {
 .socialNetworks li a:hover {
   opacity: 0.7;
 }
+
+/*
+header > ul.socialNetworks {
+  display: none;
+}
+*/
 
 /*SOCIAL NETWORKING END*/
 
@@ -96,6 +102,7 @@ header nav ul li a:hover {
 }
 
 /*NAV END*/
+
 @media (min-width: 320px) {
   /* mobile */
   header {
@@ -132,6 +139,11 @@ header nav ul li a:hover {
   header .bars {
     display: none;
   }
+/*
+  header > ul.socialNetworks {
+    display: flex;
+  }
+*/
 }
 
 @media (min-width: 1200px) {
