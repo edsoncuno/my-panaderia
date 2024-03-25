@@ -1,5 +1,6 @@
 const data = {
   title: "Nuestro menú",
+  categories: ["POSTRES", "CAFÉS"],
   itemsPostres: [
     {
       nombre: "Lorem ipsum dolor.",

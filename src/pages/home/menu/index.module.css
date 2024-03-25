@@ -36,3 +36,7 @@
 .container .categories .category:hover {
   color: gold;
 }
+
+.container .categories .categoryActive {
+  color: gold;
+}
