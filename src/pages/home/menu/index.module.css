@@ -40,3 +40,69 @@
 .container .categories .categoryActive {
   color: gold;
 }
+
+.container .items {
+  width: 70%;
+  border: 0.5rem double gray;
+  padding: 1.5rem;
+}
+
+.container .items .item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container .items .item:last-child {
+  border-bottom: transparent;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.container .items .item .left {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .items .item .left > div {
+  font-size: 1.5rem;
+}
+
+.container .items .item .left > p {
+  color: gray;
+  margin-top: 1%;
+}
+
+.container .items .item .right {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+@media all and (max-width: 612px) {
+  .container .items .item .left {
+    width: 100%;
+  }
+
+  .container .items .item .right {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+
+@media all and (max-width: 612px) {
+  .container .items {
+    width: 90%;
+  }
+}
+@media all and (max-width: 350px) {
+  .container .items {
+    width: 100%;
+  }
+}

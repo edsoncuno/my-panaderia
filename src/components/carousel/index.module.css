@@ -1,0 +1,27 @@
+.carousel {
+  overflow: hidden;
+}
+
+.slider {
+  width: 300%;
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.imagen1 {
+  background-image: url("https://i.postimg.cc/VkfYPyQ7/chef1.jpg");
+}
+
+.imagen2 {
+  background-image: url("https://i.postimg.cc/0yV98t99/chef2.jpg");
+}
+
+.imagen3 {
+  background-image: url("https://i.postimg.cc/q7Y0KztY/chef3.jpg");
+}
