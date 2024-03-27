@@ -1,14 +1,25 @@
 import styles from "./index.module.css";
 
 import Button from "./../../../components/button";
-import InputText from "./../../../components/input-text";
+import InputText2 from "./../../../components/input-text/index2";
 
 export default function App() {
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
   return (
     <>
-      Contacto
-      <Button click={click} text="asd" />
-      <InputText field={"Nombre"} message={"Por favor llena el campo con tu nombre"} />
+      <form onSubmit={handleSubmit}>
+        <div style={{ alignContent: "center", width: "50%", display: "flex" }}>
+          <InputText2
+            text={"Nombre"}
+            id={"contacto-nombre"}
+            existError={true}
+            error={"Hay un error"}
+          />
+        </div>
+        <Button click={click} text="asd" />
+      </form>
     </>
   );
 }

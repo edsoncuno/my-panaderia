@@ -1,4 +1,5 @@
 "use client";
+import styles from "./index.module.css";
 import { useState } from "react";
 
 export default function App({
@@ -13,7 +14,7 @@ export default function App({
 
   const handleFocus = () => {
     if (modelValue === "") {
-      setIsActive(true);
+      setIsActive(false);
     } else {
       setIsActive(true);
     }
@@ -21,14 +22,14 @@ export default function App({
 
   const handleBlur = () => {
     if (modelValue === "") {
-      setIsActive(false);
-    } else {
       setIsActive(true);
+    } else {
+      setIsActive(false);
     }
   };
 
   return (
-    <div style={{ width: "100%", height: "auto", position: "relative" }}>
+    <div className={styles.container}>
       <label
         style={{
           color: "#777",

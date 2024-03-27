@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container label {
+  color: #777;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin-left: 1rem;
+  transition: all 0.3s;
+}
+
+.container .element {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.container .element:focus {
+  border-bottom: 2px solid gold;
+}
+
+.container span {
+  color: rgb(255, 59, 59);
+  font-size: 0.8rem;
+}
