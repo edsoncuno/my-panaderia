@@ -1,29 +1,23 @@
 import styles from "./index.module.css";
-
-import Button from "./../../../components/button";
-import InputText2 from "./../../../components/input-text/index2";
+import Form from "./form.jsx";
 
 export default function App() {
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div style={{ alignContent: "center", width: "50%", display: "flex" }}>
-          <InputText2
-            text={"Nombre"}
-            id={"contacto-nombre"}
-            existError={true}
-            error={"Hay un error"}
-          />
-        </div>
-        <Button click={click} text="asd" />
-      </form>
-    </>
+    <section id="section-contacto" className={styles.container}>
+      <div className={styles.background}>
+        <div className={styles.image}></div>
+      </div>
+      <div className={styles.cards}></div>
+      <div className={styles.containerform}>
+        <Form />
+      </div>
+    </section>
   );
 }
 
-function click() {
-  console.log("button funciona");
-}
+/*
+<div class="card" v-for="item in itemsCards">
+                <div class="title">{{ item.title }}</div>
+                <div class="text">{{ item.text }}</div>
+            </div>
+*/

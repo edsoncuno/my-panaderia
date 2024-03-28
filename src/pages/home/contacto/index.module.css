@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  height: 55rem;
+  position: relative;
+}
+
+.container .background {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 2.5fr;
+  grid-template-columns: 1fr;
+}
+
+.container .background .image {
+  background-image: url("https://i.postimg.cc/d0DwD80r/contacto.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container .cards {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.container .containerform {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 50%;
+  height: 30rem;
+  background: greenyellow;
+}
