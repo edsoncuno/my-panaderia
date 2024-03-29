@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container .column {
+  width: 50%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .column .foto {
+  width: 50%;
+}
+
+.container .column .texto {
+  width: 50%;
+  padding: 3.375rem;
+}
+
+.container .column .texto h2 {
+  font-size: 1.8125rem;
+  font-weight: 400;
+  line-height: 2.6875rem;
+  margin-bottom: 1.125rem;
+}
+
+.container .column .texto p {
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+}
