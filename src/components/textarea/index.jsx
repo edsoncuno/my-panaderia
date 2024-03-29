@@ -4,13 +4,14 @@ import { useState } from "react";
 
 export default function App(props) {
   const [isActive, setIsActive] = useState(false);
+  const [value, setValue] = useState("");
 
   function handleFocus() {
     setIsActive(true);
   }
 
   function handleBlur() {
-    if (props.value == "") {
+    if (value == "") {
       setIsActive(false);
     } else {
       setIsActive(true);
@@ -24,7 +25,7 @@ export default function App(props) {
         style={
           isActive
             ? {
-                top: "-0.75rem",
+                top: "-1.5rem",
                 marginLeft: 0,
                 fontSize: "0.75rem",
                 lineHeight: "2rem",
@@ -34,16 +35,15 @@ export default function App(props) {
       >
         {props.text}
       </label>
-      <input
-        type="text"
+      <textarea
         id={props.id}
         name={props.id}
         className={styles.element}
-        value={props.value}
-        onChange={props.onChange}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         onFocus={handleFocus}
         onBlur={handleBlur}
-      />
+      ></textarea>
       {props.existError && <span>{props.error}</span>}
     </div>
   );

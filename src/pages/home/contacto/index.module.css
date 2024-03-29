@@ -28,11 +28,78 @@
   width: 100%;
 }
 
+.container .cards .card {
+  width: 15rem;
+  height: 10rem;
+  margin: 1rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 6px double gray;
+}
+
+.container .cards .card .title {
+  font-size: 1.5rem;
+  border-bottom: 1px gray solid;
+  padding-bottom: 0.5rem;
+}
+
+.container .cards .card .text {
+  color: gray;
+  padding: 0rem 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .container .containerform {
   position: absolute;
   top: 40%;
   left: 25%;
   width: 50%;
   height: 30rem;
-  background: greenyellow;
+}
+
+@media all and (max-width: 815px) {
+  .container .cards {
+    top: 1%;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .containerform {
+    top: 40%;
+    left: 15%;
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 815px) {
+  .container .containerform {
+    top: 45%;
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 543px) {
+  .container .containerform {
+    top: 53%;
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 815px) {
+  .container {
+    height: 60rem;
+  }
+}
+
+@media all and (max-width: 543px) {
+  .container {
+    height: 70rem;
+  }
 }

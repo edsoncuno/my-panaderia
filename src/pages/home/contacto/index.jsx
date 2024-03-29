@@ -1,5 +1,6 @@
 import styles from "./index.module.css";
 import Form from "./form.jsx";
+import data from "./data";
 
 export default function App() {
   return (
@@ -7,17 +8,20 @@ export default function App() {
       <div className={styles.background}>
         <div className={styles.image}></div>
       </div>
-      <div className={styles.cards}></div>
+      <div className={styles.cards}>
+        {data.cards.map((item) => (
+          <div
+            key={"id-contacto-cards-card-" + item.id}
+            className={styles.card}
+          >
+            <div className={styles.title}>{item.title}</div>
+            <div className={styles.text}>{item.text}</div>
+          </div>
+        ))}
+      </div>
       <div className={styles.containerform}>
         <Form />
       </div>
     </section>
   );
 }
-
-/*
-<div class="card" v-for="item in itemsCards">
-                <div class="title">{{ item.title }}</div>
-                <div class="text">{{ item.text }}</div>
-            </div>
-*/

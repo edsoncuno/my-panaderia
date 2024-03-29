@@ -35,7 +35,7 @@ export default function App(props) {
         {props.text}
       </label>
       <input
-        type="text"
+        type="email"
         id={props.id}
         name={props.id}
         className={styles.element}
