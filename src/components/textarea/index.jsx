@@ -4,14 +4,13 @@ import { useState } from "react";
 
 export default function App(props) {
   const [isActive, setIsActive] = useState(false);
-  const [value, setValue] = useState("");
 
   function handleFocus() {
     setIsActive(true);
   }
 
   function handleBlur() {
-    if (value == "") {
+    if (props.value == "") {
       setIsActive(false);
     } else {
       setIsActive(true);
@@ -39,8 +38,8 @@ export default function App(props) {
         id={props.id}
         name={props.id}
         className={styles.element}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={props.value}
+        onChange={props.onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
       ></textarea>
