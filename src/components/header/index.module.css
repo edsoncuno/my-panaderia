@@ -30,7 +30,7 @@ header a .logo {
 header .bars {
   width: 3rem;
   height: 3rem;
-  background-image: url("./bars-black.svg");
+  background-image: url("/svg/bars-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
