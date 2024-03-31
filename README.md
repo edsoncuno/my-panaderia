@@ -5,9 +5,9 @@ Me complace presentarles la página web de nuestra panadería. Este proyecto ha 
 ## Ver
 
 Para ver la pagina web, hay que dirigirse a la siguiente dirección web:
-https://edsoncuno.github.io/my-maestro
+https://my-panaderia.onrender.com/
 
-## Iniciar el servidor de desarrollo
+## Iniciar el servidor de desarrollo+
 
 Abrir la carpeta del proyecto Visual Studio Code.
 
