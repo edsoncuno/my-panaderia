@@ -16,6 +16,10 @@ header {
   z-index: 1;
 }
 
+header a {
+  display: block;
+}
+
 header a .logo {
   width: 4rem;
   height: 4rem;

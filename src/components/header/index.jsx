@@ -40,7 +40,7 @@ export default function App() {
 
   return (
     <header>
-      <a href="#section-inicio">
+      <a href="#section-inicio" onClick={(e) => scrollToSection(e)}>
         <img src={logo} alt="logo" className={styles.logo} />
       </a>
       <nav className={`${isShowingSideBar ? styles.navOpen : ""}`}>
