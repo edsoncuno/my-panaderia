@@ -1,17 +1,17 @@
-import Inicio from "./inicio"
+import Inicio from "./inicio";
 import Nosotros from "./nosotros";
-import NuestroChef from "./nuestro-chef"
-import Menu from "./menu"
-import Contacto from "./contacto"
+import NuestroChef from "./nuestro-chef";
+import Menu from "./menu";
+import Contacto from "./contacto";
 
 export default function App() {
   return (
-    <>
-      <Inicio/>
+    <main>
+      <Inicio />
       <Nosotros />
-      <NuestroChef/>
-      <Menu/>
-      <Contacto/>
-    </>
+      <NuestroChef />
+      <Menu />
+      <Contacto />
+    </main>
   );
 }

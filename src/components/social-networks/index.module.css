@@ -4,6 +4,10 @@
   justify-content: space-evenly;
   list-style: none;
 }
+
+.app li {
+  border-bottom: 0;
+}
 .app li a {
   min-width: 1rem;
   min-height: 1rem;

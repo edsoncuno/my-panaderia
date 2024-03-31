@@ -32,3 +32,52 @@
   font-size: 0.9375rem;
   line-height: 1.75rem;
 }
+
+.container .column .fotoFullDerecha {
+  width: 100%;
+  min-height: 15.25rem;
+}
+
+.container .column .fotoFullIzquierda {
+  width: 100%;
+  min-height: 15.25rem;
+}
+
+@media all and (max-width: 800px) {
+  .container .column {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .container .column .texto h2 {
+    text-align: center;
+  }
+
+  .container .column .texto p {
+    text-align: justify;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  .container .column .texto {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .container .column .foto {
+    display: none;
+  }
+
+  .container .column .texto {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .container .column .fotoFullIzquierda {
+    display: none;
+  }
+}

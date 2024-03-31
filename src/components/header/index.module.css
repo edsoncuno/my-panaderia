@@ -26,7 +26,7 @@ header a .logo {
 header .bars {
   width: 3rem;
   height: 3rem;
-  background-image: url("/bars-black.svg");
+  background-image: url("./bars-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -34,34 +34,9 @@ header .bars {
 /*BARS END*/
 
 /*SOCIAL NETWORKING START*/
-.socialNetworks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  list-style: none;
-}
-
-.socialNetworks li {
-  border-bottom: 0;
-}
-
-.socialNetworks li a {
-  min-width: 1rem;
-  min-height: 1rem;
-  transition: opacity 0.3s ease;
-  display: block;
-  margin-right: 1rem;
-}
-
-.socialNetworks li a:hover {
-  opacity: 0.7;
-}
-
-/*
-header > ul.socialNetworks {
+.socialNetworksPc {
   display: none;
 }
-*/
 
 /*SOCIAL NETWORKING END*/
 
@@ -89,6 +64,10 @@ header nav ul li {
   border-bottom: 1px solid grey;
 }
 
+header nav ul li:last-child {
+  border-bottom: 0;
+}
+
 header nav ul li a {
   font-size: 1.5rem;
   text-decoration: none;
@@ -107,50 +86,51 @@ header nav ul li a:hover {
 
 @media (min-width: 320px) {
   /* mobile */
-  header {
-    background-color: red;
-  }
 }
 
 @media (min-width: 480px) {
   /* mobile */
-  header {
-    background-color: black;
-  }
 }
 
 @media (min-width: 576px) {
   /* mobile */
-  header {
-    background: green;
-  }
 }
 
 @media (min-width: 768px) {
   /* tablet */
-  header {
-    background: blue;
-  }
 }
 
 @media (min-width: 992px) {
   /* tablet */
-  header {
-    background: orange;
+  header nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
   }
+  header nav ul {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin-right: 2rem;
+    border: transparent;
+  }
+  header nav ul li:last-child {
+    margin-right: 0;
+  }
+
   header .bars {
     display: none;
   }
-  /*
-  header > ul.socialNetworks {
-    display: flex;
+  .socialNetworksPc {
+    display: block;
   }
-*/
+  .socialNetworksMobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
   /* dekstop */
-  header {
-    background: cyan;
-  }
 }

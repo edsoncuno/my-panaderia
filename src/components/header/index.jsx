@@ -2,41 +2,40 @@
 import styles from "./index.module.css";
 import logo from "/logos/logo.png";
 import { useState } from "react";
+import data from "./data.js";
+import SocialNetworks from "./../social-networks";
 
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
 
-  const logos = [
-    { url: "/logos/facebook-logo.svg", href: "https://www.facebook.com" },
-    { url: "/logos/twitter-logo-black.svg", href: "https://www.twitter.com" },
-    { url: "/logos/instagram-logo.svg", href: "https://www.instagram.com" },
-  ];
-
-  const enlaces = [
-    { href: "#section-inicio", label: "Inicio" },
-    { href: "#section-nosotros", label: "Nosotros" },
-    { href: "#section-nuestro-chef", label: "Nuestro Chef" },
-    { href: "#section-menu", label: "Menú" },
-    { href: "#section-contacto", label: "Contacto" },
-  ];
-
-  const list = enlaces.map((item, index) => (
-    <li key={"id-nav-ul-li" + index}>
-      <a href={item.href}>{item.label}</a>
+  const list = data.sections.map((item, index) => (
+    <li key={"header-nav-ul-li" + index}>
+      <a href={item.href} onClick={(e) => scrollToSection(e)}>
+        {item.label}
+      </a>
     </li>
-  ));
-
-  const listLogos = logos.map((item, index) => (
-    <Logo
-      key={"id-nav-ul-li-ul-li-" + index}
-      url={item.url}
-      href={item.href}
-      size={"3rem"}
-    />
   ));
 
   function handleSideBar() {
     setIsShowingSideBar(!isShowingSideBar);
+  }
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+      const targetPosition =
+        targetElement.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight;
+
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+
+    setIsShowingSideBar(false);
   }
 
   return (
@@ -48,33 +47,16 @@ export default function App() {
         <ul>
           {list}
           <li>
-            <ul className={styles.socialNetworks}>{listLogos}</ul>
+            <div className={styles.socialNetworksMobile}>
+              <SocialNetworks logos={data.redes} size={"3rem"} />
+            </div>
           </li>
         </ul>
       </nav>
       <div className={styles.bars} onClick={handleSideBar} />
-      <ul className={styles.socialNetworks}>{listLogos}</ul>
+      <div className={styles.socialNetworksPc}>
+        <SocialNetworks logos={data.redes} size={"3rem"} />
+      </div>
     </header>
-  );
-}
-
-function Logo(props) {
-  return (
-    <li>
-      <a
-        href={props.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.logo}
-        styles={{
-          backgroundImage: `url(${props.url})`,
-          backgroundPosition: "center",
-          backgroundSize: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          minWidth: `${props.size}`,
-          minHeight: `${props.size}`,
-        }}
-      />
-    </li>
   );
 }
